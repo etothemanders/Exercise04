@@ -86,7 +86,8 @@ def delete_middle(input_list):
     """Remove all elements from the input list except for the first two and the
     last two.
     """
-    pass
+    del input_list[2:-2]
+    return input_list
 
 """
 Part 2: Derived operations on lists
