@@ -32,7 +32,7 @@ def last(input_list):
 
 def init(input_list):
     """Return all elements of the input list except the last."""
-    pass
+    return input_list[:-1]
 
 def first_three(input_list):
     """Return the first three elements of the input list."""
