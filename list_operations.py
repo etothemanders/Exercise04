@@ -60,7 +60,8 @@ def inner_four_end(input_list):
 
 def replace_head(input_list):
     """Replace the head of the input list with the value 42."""
-    pass
+    input_list[0] = 42
+    return input_list
 
 def replace_third_and_last(input_list):
     """Replace the third and last elements of the input list with the value 37."""
