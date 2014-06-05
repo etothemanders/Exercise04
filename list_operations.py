@@ -73,7 +73,8 @@ def replace_middle(input_list):
     """Replace all elements of the input list with the the values 42 and 37, in
     that order, except for the first two and last two elements.
     """
-    pass
+    input_list[2:-2] = [42, 37]
+    return input_list
 
 def delete_third_and_seventh(input_list):
     """Remove the third and seventh elements of the input list."""
