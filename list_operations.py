@@ -24,7 +24,7 @@ def head(input_list):
 
 def tail(input_list):
     """Return all elements of the input list except the first."""
-    pass
+    return input_list[1:]
 
 def last(input_list):
     """Return the last element of the input list."""
