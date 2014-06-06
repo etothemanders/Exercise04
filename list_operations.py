@@ -156,7 +156,11 @@ def custom_pop(input_list):
 
 def custom_index(input_list, value):
     """custom_index(input_list, value) imitates input_list.index(value)"""
-    pass
+    for i in range(custom_len(input_list)):
+        if input_list[i] == value:
+            return i
+
+
 
 def custom_count(input_list, value):
     """custom_count(input_list, value) imitates input_list.count(value)"""
