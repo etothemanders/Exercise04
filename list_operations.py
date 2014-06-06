@@ -172,7 +172,21 @@ def custom_count(input_list, value):
 
 def custom_reverse(input_list):
     """custom_reverse(input_list) imitates input_list.reverse()"""
-    pass
+    front_index = 0
+    end_index = -1
+
+    while front_index  < custom_len(input_list)/2:
+        print "On loop %d input_list is %r" % (front_index, input_list)
+        temp = input_list[front_index]
+        print "temp is ", temp
+        input_list[front_index] = input_list[end_index]
+        input_list[end_index] = temp
+        front_index += 1
+        print "front_index is ", front_index
+        end_index -= 1
+        print "end_index is ", end_index
+
+    return input_list
 
 def custom_contains(input_list, value):
     """custom_contains(input_list, value) imitates (value in input_list)"""
