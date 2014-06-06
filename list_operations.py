@@ -133,11 +133,26 @@ def custom_insert(input_list, index, value):
 
 def custom_remove(input_list, value):
     """custom_remove(input_list, value) imitates input_list.remove(value)"""
-    pass
+    value_index = None
+    i = 0
+
+    for item in input_list:
+        if input_list[i] == value:
+            value_index = i
+            del input_list[value_index]
+            return input_list
+        else:
+            i += 1
+
 
 def custom_pop(input_list):
     """custom_pop(input_list) imitates input_list.pop()"""
-    pass
+    pop_value = input_list[-1]
+    print "this is pop value" , pop_value
+    del input_list[-1]
+    print input_list
+    return pop_value
+
 
 def custom_index(input_list, value):
     """custom_index(input_list, value) imitates input_list.index(value)"""
