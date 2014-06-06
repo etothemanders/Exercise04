@@ -160,11 +160,15 @@ def custom_index(input_list, value):
         if input_list[i] == value:
             return i
 
-
-
 def custom_count(input_list, value):
     """custom_count(input_list, value) imitates input_list.count(value)"""
-    pass
+    value_count = 0
+
+    for item in input_list:
+        if item == value:
+            value_count += 1
+
+    return value_count
 
 def custom_reverse(input_list):
     """custom_reverse(input_list) imitates input_list.reverse()"""
