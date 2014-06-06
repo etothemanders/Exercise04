@@ -79,7 +79,7 @@ def replace_middle(input_list):
 def delete_third_and_seventh(input_list):
     """Remove the third and seventh elements of the input list."""
     del input_list[2]
-    del input_list[6]
+    del input_list[5]
     return input_list
 
 def delete_middle(input_list):
@@ -133,24 +133,18 @@ def custom_insert(input_list, index, value):
 
 def custom_remove(input_list, value):
     """custom_remove(input_list, value) imitates input_list.remove(value)"""
-    value_index = None
-    i = 0
 
-    for item in input_list:
-        if input_list[i] == value:
-            value_index = i
-            del input_list[value_index]
+    for i in range(custom_len(input_list)):
+        if value == input_list[i]:
+            del input_list[i]
             return input_list
-        else:
-            i += 1
+       
 
 
 def custom_pop(input_list):
     """custom_pop(input_list) imitates input_list.pop()"""
     pop_value = input_list[-1]
-    print "this is pop value" , pop_value
     del input_list[-1]
-    print input_list
     return pop_value
 
 
@@ -176,21 +170,19 @@ def custom_reverse(input_list):
     end_index = -1
 
     while front_index  < custom_len(input_list)/2:
-        print "On loop %d input_list is %r" % (front_index, input_list)
         temp = input_list[front_index]
-        print "temp is ", temp
         input_list[front_index] = input_list[end_index]
         input_list[end_index] = temp
         front_index += 1
-        print "front_index is ", front_index
         end_index -= 1
-        print "end_index is ", end_index
 
     return input_list
 
 def custom_contains(input_list, value):
     """custom_contains(input_list, value) imitates (value in input_list)"""
-    pass
+    for item in input_list:
+        if item == value:
+            return True
 
 def custom_equality(some_list, another_list):
     """custom_equality(some_list, another_list) imitates

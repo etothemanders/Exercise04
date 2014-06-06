@@ -169,6 +169,11 @@ class TestListOperations(unittest.TestCase):
         self.assertEqual(self.notes, ['Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'])
         self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24])
 
+    def test_2_F_custom_pop(self):
+        self.assertEqual(custom_pop(self.months), 'Dec')
+        self.assertEqual(custom_pop(self.notes), 'Do')
+        self.assertEqual(custom_pop(self.multiples), 27)
+
         self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                                        'Jul', 'Aug', 'Sep', 'Oct', 'Nov'])
         self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti'])
@@ -183,11 +188,6 @@ class TestListOperations(unittest.TestCase):
         self.assertEqual(custom_count(self.months, 'Jul'), 1)
         self.assertEqual(custom_count(self.notes, 'Do'), 2)
         self.assertEqual(custom_count(self.multiples, 27), 1)
-
-    def test_2_F_custom_pop(self):
-        self.assertEqual(custom_pop(self.months), 'Dec')
-        self.assertEqual(custom_pop(self.notes), 'Do')
-        self.assertEqual(custom_pop(self.multiples), 27)
 
     def test_2_I_custom_reverse(self):
         custom_reverse(self.months)
